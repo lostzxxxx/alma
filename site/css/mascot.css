@@ -1,0 +1,141 @@
+/* Alminha — rostos e "vida" contínua. Gestos únicos ficam no mascot.js (WAAPI).
+   Regras: só transform/opacity; rostos trocam com fade curto; loops pausam quando a ilha recolhe. */
+.alminha {
+  --glow: hsl(var(--hue) 100% 74%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 1.5px 3px hsl(var(--hue) 100% 70% / 0.35));
+}
+.alminha .am-glowstop { stop-color: var(--glow); }
+/* cor do corpo (Configurações › Aparência › Alminha); o padrão é o creme da ficha da personagem */
+.alminha .am-c-hi { stop-color: var(--am-hi, #ffffff); }
+.alminha .am-c-body { stop-color: var(--am-body, #F6F4EF); }
+.alminha .am-c-shade { stop-color: var(--am-shade, #d6d0c4); }
+.alminha .am-arm { fill: var(--am-arm, #ece8df); }
+.alminha .am-face { fill: var(--am-visor, #1E2533); }
+.alminha .am-c-hi, .alminha .am-c-body, .alminha .am-c-shade { transition: stop-color 300ms ease; }
+
+/* pivôs: tudo gira/escala em torno da própria caixa */
+.alminha g, .alminha .am-drop, .alminha .am-arm, .alminha .m-open, .alminha .e-dot {
+  transform-box: fill-box;
+}
+.am-react, .am-pulse { transform-origin: 50% 100%; }
+.am-drop { transform-origin: 40% 100%; }
+.am-arm-l { transform-origin: 100% 50%; }
+.am-arm-r { transform-origin: 0% 50%; }
+.am-look { transition: transform 260ms var(--ease-out); }
+.am-eyes { transform-origin: 50% 50%; transition: transform 300ms var(--ease-out); }
+.am-blink, .m-open { transform-origin: 50% 50%; }
+
+/* inclina de leve na direção do mouse (propriedade rotate, que soma aos gestos em transform) */
+.am-pulse { transition: rotate 600ms var(--ease-out); }
+
+/* bochechas: aparecem quando ela fica contente, apaixonada ou animada */
+.am-blush { fill: #ff8fb0; opacity: 0; transition: opacity 260ms ease; }
+:is([data-face='love'], [data-face='excited'], [data-face='wink']) .am-blush { opacity: 0.55; }
+
+/* traços luminosos */
+.e-dot, .m-fill, .e-fill { fill: var(--glow); }
+.e-line, .m-line { fill: none; stroke: var(--glow); stroke-linecap: round; }
+.e-line { stroke-width: 1.5; }
+.m-line { stroke-width: 1.1; }
+.am-z { fill: none; stroke: var(--glow); stroke-width: 0.8; stroke-linecap: round; stroke-linejoin: round; opacity: 0; }
+
+/* cada peça do rosto aparece só nos rostos em que é usada */
+.e-dot, .e-line, .m-line, .m-fill, .e-fill {
+  opacity: 0;
+  transition: opacity 140ms ease, transform 220ms var(--ease-out);
+}
+.e-dot, .e-fill, .m-big, .m-yawn { transform-origin: 50% 50%; transform-box: fill-box; }
+[data-face='wink'] :is(.e-l, .e-happy-r, .m-smile),
+[data-face='love'] :is(.e-heart, .m-smile),
+[data-face='dizzy'] :is(.e-x, .m-o),
+[data-face='excited'] :is(.e-happy, .m-big),
+[data-face='yawn'] :is(.e-closed, .m-yawn),
+[data-face='neutral'] :is(.e-dot, .m-smile),
+[data-face='listen'] :is(.e-dot, .m-smile),
+[data-face='surprised'] :is(.e-dot, .m-o),
+[data-face='think'] :is(.e-dot, .m-flat),
+[data-face='talk'] :is(.e-dot, .m-open),
+[data-face='focus'] :is(.e-dot, .m-smile),
+[data-face='sad'] :is(.e-dot, .m-frown),
+[data-face='happy'] :is(.e-happy, .m-smile),
+[data-face='sleepy'] :is(.e-closed, .m-smile) {
+  opacity: 1;
+}
+/* variações dos olhos de bolinha */
+[data-face='listen'] .e-dot { transform: scale(1.15); }
+[data-face='surprised'] .e-dot { transform: scale(1.22); }
+[data-face='focus'] .e-dot { transform: scaleY(0.5); }
+[data-face='sad'] .e-dot { transform: scale(0.85, 0.75) translateY(0.6px); }
+[data-face='talk'] .e-dot { transform: scaleY(0.9); }
+/* pensando: olha para cima, de lado */
+[data-face='think'] .am-eyes { transform: translate(1.4px, -1.1px); }
+
+/* ---------- vida contínua ---------- */
+.am-float { animation: am-float 3.4s ease-in-out infinite; }
+@keyframes am-float {
+  50% { transform: translateY(-1.3px); }
+}
+.am-drop { animation: am-sway 2.8s ease-in-out infinite; }
+@keyframes am-sway {
+  0%, 100% { transform: rotate(-7deg) translateY(0); }
+  50% { transform: rotate(8deg) translateY(-0.6px); }
+}
+/* piscar: rápido e de vez em quando */
+.am-blink { animation: am-blink 5.2s infinite; }
+@keyframes am-blink {
+  0%, 93%, 100% { transform: none; }
+  95.5% { transform: scaleY(0.1); }
+}
+/* bracinhos balançam de leve, fora de fase */
+.am-arm-l { animation: am-arm-l 3.4s ease-in-out infinite; }
+.am-arm-r { animation: am-arm-r 3.4s ease-in-out infinite; }
+@keyframes am-arm-l { 50% { transform: rotate(10deg); } }
+@keyframes am-arm-r { 50% { transform: rotate(-10deg); } }
+
+/* rostos mudam o ritmo */
+[data-face='think'] .am-drop { animation-duration: 0.9s; }
+[data-face='listen'] .am-float { animation-duration: 1.6s; }
+[data-face='talk'] .am-float { animation-duration: 2s; }
+[data-face='sleepy'] .am-float { animation-duration: 5.5s; }
+[data-face='sleepy'] .am-drop { animation-duration: 5s; }
+[data-face='sleepy'] .am-z { animation: am-z 2.6s ease-out infinite; }
+@keyframes am-z {
+  0% { opacity: 0; transform: translate(-1px, 2px) scale(0.7); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translate(1.5px, -2.5px) scale(1); }
+}
+[data-face='happy'] .am-arm-r { animation-duration: 1.6s; }
+/* coração batendo, tontura girando, bocejo abrindo devagar */
+[data-face='love'] .e-heart { animation: am-beat 0.9s ease-in-out infinite; }
+@keyframes am-beat { 0%, 100% { transform: scale(1); } 25% { transform: scale(1.22); } 45% { transform: scale(0.96); } }
+[data-face='dizzy'] .am-eyes { animation: am-dizzy 0.6s linear infinite; }
+@keyframes am-dizzy { to { transform: rotate(360deg); } }
+[data-face='yawn'] .m-yawn { animation: am-yawn 1.5s ease-in-out both; }
+@keyframes am-yawn { 0% { transform: scale(0.4, 0.3); } 45%, 70% { transform: scale(1.1, 1.2); } 100% { transform: scale(0.5, 0.4); } }
+[data-face='excited'] .am-float { animation-duration: 1.2s; }
+
+/* ---------- partículas (camada #fx, fora do recorte da ilha) ---------- */
+.am-fx {
+  --fx: hsl(var(--hue) 100% 76%);
+  position: absolute;
+  pointer-events: none;
+  filter: drop-shadow(0 0 2px hsl(var(--hue) 100% 70% / 0.6));
+  will-change: transform, opacity;
+}
+.am-fx svg { display: block; width: 100%; height: 100%; overflow: visible; fill: var(--fx); }
+.am-fx svg.stroke { fill: none; stroke: var(--fx); stroke-width: 1.3; stroke-linecap: round; }
+.am-fx-heart { --fx: #ff8fb0; filter: drop-shadow(0 0 2px #ff8fb099); }
+.am-fx-sun { --fx: #ffc65c; filter: drop-shadow(0 0 2px #ffc65c99); }
+.am-fx-snow { --fx: #bfe9ff; }
+
+/* ilha recolhida: tudo parado (economiza GPU) */
+#pill[data-mode='dormant'] .alminha * { animation-play-state: paused; }
+
+/* movimento reduzido: rostos ainda trocam (com fade), mas nada flutua ou balança */
+:root.reduce .alminha * { animation: none !important; }
+:root.reduce .am-pulse { transition: none; }
+:root.reduce .am-look, :root.reduce .am-eyes { transition: none; }

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:" />
+  <title>Alma</title>
+  <link rel="stylesheet" href="motion.css" />
+  <link rel="stylesheet" href="island.css" />
+  <link rel="stylesheet" href="glass.css" />
+  <link rel="stylesheet" href="mascot.css" />
+</head>
+<body>
+  <div id="stage">
+    <!-- a ilha: uma forma só, que muda de tamanho por clip-path (linha → cápsula) -->
+    <div id="pillWrap">
+      <div id="pill" data-mode="dormant">
+        <div class="soul" id="soul"></div>
+        <span id="trayBadge" title="Bandeja de arquivos" hidden></span>
+        <div id="pillRight"></div>
+      </div>
+      <!-- sombra da ilha numa camada à parte: só é redesenhada quando a forma muda, não a cada gesto da Alminha -->
+      <div id="pillShadow" aria-hidden="true"><i></i></div>
+    </div>
+    <!-- hotbar: desce da ilha ao passar o mouse (apps fixados + janelas abertas) -->
+    <nav id="dock" aria-label="Hotbar">
+      <button class="dk dk-start" data-start title="Iniciar" aria-label="Iniciar">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M1 1h8.4v8.4H1zM10.6 1H19v8.4h-8.4zM1 10.6h8.4V19H1zM10.6 10.6H19V19h-8.4z" /></svg>
+      </button>
+      <span class="dk-sep"></span>
+      <div id="dockItems"></div>
+    </nav>
+
+    <!-- bandeja de arquivos: aparece ao arrastar arquivos para a ilha -->
+    <div id="drop" aria-hidden="true">
+      <div class="drop-in"><span class="drop-ic"></span><b>Solte para guardar na bandeja</b><small>Fica aqui por 12 horas, pronto para enviar ou mover</small></div>
+    </div>
+
+    <!-- partículas da Alminha (fora do recorte da ilha) -->
+    <div id="fx" aria-hidden="true"></div>
+
+    <!-- painel (abre com clique na ilha) -->
+    <div id="panel" class="hit">
+      <!-- cabeçalho: nome e "Seu espaço pessoal"; à direita, a data e as configurações -->
+      <header class="panel-heading">
+        <div id="panelBrand"></div>
+        <div class="head-right">
+          <span class="head-date" id="panelDate"></span>
+          <button class="icon-btn head-btn" id="openSettings" title="Configurações" aria-label="Configurações"></button>
+        </div>
+      </header>
+      <nav id="tabs"><span id="tabInd"></span></nav>
+      <section id="view"></section>
+    </div>
+
+    <!-- avisos, logo abaixo da ilha -->
+    <div id="below">
+      <div id="toasts"></div>
+    </div>
+  </div>
+  <script src="theme.js"></script>
+  <script src="icons.js"></script>
+  <script src="motion.js"></script>
+  <script src="liquid.js"></script>
+  <script src="mascot.js"></script>
+  <script src="island.js"></script>
+</body>
+</html>

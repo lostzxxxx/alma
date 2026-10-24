@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Alma — a ilha no topo do seu Windows</title>
+  <meta name="description" content="A Alma transforma o topo do Windows numa ilha com a Alminha: foco, tradução, conta-gotas, ar-condicionado, música, arquivos e ações automáticas a um passar de mouse. Grátis." />
+  <meta name="theme-color" content="#05070f" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)" />
+  <meta property="og:title" content="Alma — a ilha no topo do seu Windows" />
+  <meta property="og:description" content="Ar-condicionado, música, tarefas, arquivos e seus apps a um passar de mouse, com a Alminha." />
+  <meta property="og:image" content="assets/icon.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="js/vendor/lenis.css" />
+  <link rel="stylesheet" href="css/mascot.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/novo.css" />
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- luz ambiente (fica atrás de tudo e muda de cor entre as seções) -->
+  <div class="ambient" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+
+  <!-- barra do topo: a camada de vidro do site -->
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#topo" aria-label="Alma, início">
+      <img src="assets/logo-mark.svg" alt="" width="46" height="18" />
+      <svg class="wordmark" viewBox="0 0 324 98" preserveAspectRatio="xMinYMid meet" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"><path d="M10 86 54 11 97 86"/><path d="M130 11V86"/><path d="M168 86V60C168 48 176 41 188 41S208 48 208 60V86M208 60C208 48 216 41 228 41S248 48 248 60V86"/><circle cx="291" cy="65" r="21"/><path d="M312 44V86"/></g>
+        <circle cx="54.5" cy="66" r="9.5" fill="#2f9bff"/>
+      </svg>
+    </a>
+    <nav class="nav-links" aria-label="Seções">
+      <span class="nav-ind" aria-hidden="true"></span>
+      <a href="#ilha">A ilha</a>
+      <a href="#novo">Novidades<span class="dot" aria-hidden="true"></span></a>
+      <a href="#alminha">Alminha</a>
+      <a href="#vidro">Liquid Glass</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#temas">Temas</a>
+      <a href="#privacidade">Privacidade</a>
+    </nav>
+    <a class="btn btn-primary btn-sm magnetic" href="#baixar">Baixar</a>
+  </header>
+
+  <main id="conteudo">
+    <!-- ===================== Topo ===================== -->
+    <section class="hero" id="topo">
+      <!-- peça central: a ilha de vidro flutuando, com as "bolhas" do que cabe nela (se unem à ilha ao rolar) -->
+      <div class="hero-stage reveal" id="heroStage" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <span class="chip" style="--ox:-330px;--oy:-46px;--dp:.7"><i><b class="ci ci-snow"></b>21° · Frio</i></span>
+        <span class="chip" style="--ox:325px;--oy:-60px;--dp:1"><i><b class="ci ci-note"></b>Tocando agora</i></span>
+        <span class="chip" style="--ox:-360px;--oy:56px;--dp:.9"><i><b class="ci ci-file"></b>2 arquivos na bandeja</i></span>
+        <span class="chip" style="--ox:345px;--oy:48px;--dp:.6"><i><b class="ci ci-check"></b>3 tarefas</i></span>
+        <span class="chip" style="--ox:-6px;--oy:-102px;--dp:.5"><i><b class="ci ci-apps"></b>Hotbar</i></span>
+        <span class="chip" style="--ox:-205px;--oy:-112px;--dp:.8"><i><b class="ci ci-timer"></b>Foco · 24:13</i></span>
+        <span class="chip" style="--ox:195px;--oy:-118px;--dp:.65"><i><b class="ci ci-tr"></b>Traduzido</i></span>
+        <div class="hero-island" id="heroIsland">
+          <div class="hi-soul" id="heroSoul"></div>
+          <div class="hi-mid"><b>Boa noite</b><small id="heroDay">Sexta-feira, 23 de out</small></div>
+          <div class="hi-right"><span class="hi-ac"><b class="ci ci-snow"></b>21°</span><span class="hi-clock" id="heroClock">14:32</span></div>
+        </div>
+      </div>
+      <a class="hero-new reveal" href="#novo"><span class="new-badge">Novo</span>Foco, tradução, conta-gotas e ações automáticas<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="eyebrow reveal">Para Windows 10 e 11 · grátis</p>
+      <h1 class="reveal">O topo da sua tela,<br /><span class="shine">vivo.</span></h1>
+      <p class="lead reveal">A Alma transforma o topo do Windows numa ilha com a Alminha. Foco, tradução, cores, ar-condicionado, música, arquivos e seus apps ficam a um passar de mouse.</p>
+      <div class="cta reveal">
+        <a class="btn btn-primary btn-lg magnetic dl-link" href="#baixar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg>
+          Baixar para Windows
+        </a>
+        <a class="btn btn-glass btn-lg magnetic" href="#ilha">Ver como funciona</a>
+      </div>
+      <p class="meta reveal"><span class="dl-version">Versão 1.1.1</span> · <span class="dl-size">107 MB</span></p>
+
+    </section>
+
+    <!-- faixas de recursos que correm em sentidos opostos (enfeite; para com o mouse em cima) -->
+    <div class="ribbon" aria-label="O que a Alma faz">
+      <div class="rb-row"><div class="rb-track">
+        <span class="rb-item new"><b class="ci ci-timer"></b>Foco e pomodoro</span>
+        <span class="rb-item"><b class="ci ci-snow"></b>Ar-condicionado</span>
+        <span class="rb-item new"><b class="ci ci-tr"></b>Tradução rápida</span>
+        <span class="rb-item"><b class="ci ci-note"></b>Tocando agora</span>
+        <span class="rb-item new"><b class="ci ci-pip"></b>Conta-gotas</span>
+        <span class="rb-item"><b class="ci ci-file"></b>Bandeja de arquivos</span>
+        <span class="rb-item new"><b class="ci ci-bolt"></b>Alma Actions</span>
+        <span class="rb-item"><b class="ci ci-apps"></b>Hotbar</span>
+      </div></div>
+      <div class="rb-row rev"><div class="rb-track">
+        <span class="rb-item"><b class="ci ci-drop"></b>Liquid Glass</span>
+        <span class="rb-item new"><b class="ci ci-grid"></b>Módulos do seu jeito</span>
+        <span class="rb-item"><b class="ci ci-check"></b>Tarefas</span>
+        <span class="rb-item"><b class="ci ci-heart"></b>A Alminha</span>
+        <span class="rb-item"><b class="ci ci-apps"></b>Temas</span>
+        <span class="rb-item"><b class="ci ci-file"></b>Copiados</span>
+        <span class="rb-item"><b class="ci ci-check"></b>Atalho de teclado</span>
+        <span class="rb-item"><b class="ci ci-drop"></b>Sem conta, sem login</span>
+      </div></div>
+    </div>
+
+    <!-- ===================== A ilha (história fixa, muda com a rolagem) ===================== -->
+    <section class="story" id="ilha" aria-labelledby="ilhaTitulo">
+      <h2 class="sr-only" id="ilhaTitulo">Como a ilha funciona</h2>
+      <div class="story-sticky">
+        <div class="screen-wrap" id="screenWrap">
+          <div class="screen" id="screen" aria-hidden="true">
+            <div class="desk" id="desk" data-step="0">
+              <!-- um Windows 11: papel de parede "flor", ícones, duas janelas e a barra de tarefas -->
+              <div class="wall"><i class="p1"></i><i class="p2"></i><i class="p3"></i><i class="p4"></i><i class="p5"></i><i class="core"></i></div>
+              <div class="d-icons">
+                <span><i class="di di-trash"></i>Lixeira</span>
+                <span><i class="di di-folder"></i>Documentos</span>
+                <span><i class="di di-photo"></i>Fotos</span>
+              </div>
+              <div class="win w-browser">
+                <div class="win-bar"><span class="wb-tab"><i></i>Receitas da vovó</span><span class="wb-plus">+</span><span class="wb-ctl"><i>─</i><i>☐</i><i class="x">✕</i></span></div>
+                <div class="wb-url"><span></span></div>
+                <div class="win-body">
+                  <div class="wb-hero"><b></b></div>
+                  <p></p><p class="short"></p>
+                  <div class="wb-cards"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="win w-music">
+                <div class="win-bar"><span class="wb-title"><i></i>Música</span><span class="wb-ctl"><i>─</i><i>☐</i><i class="x">✕</i></span></div>
+                <div class="wm-body"><div class="wm-art"></div><b>Noites de Lo-fi</b><small>Alminha &amp; Amigos</small><div class="wm-bar"><i></i></div><div class="wm-ctl"><i></i><i class="play"></i><i></i></div></div>
+              </div>
+              <div class="d-taskbar">
+                <span class="tb-start"></span><span class="tb-search">Pesquisar</span>
+                <span class="tb-app" style="--h:42"></span><span class="tb-app run" style="--h:205"></span><span class="tb-app run" style="--h:142"></span><span class="tb-app" style="--h:265"></span><span class="tb-app" style="--h:340"></span>
+                <span class="tb-tray"><b id="tbClock">14:32</b><small id="tbDate">23/10/2026</small></span>
+              </div>
+
+              <!-- holofote: escurece o resto e destaca a ilha (passos 1 e 2) -->
+              <div class="d-spot"></div>
+              <div class="d-ring"></div>
+              <div class="d-tag">Aqui mora a ilha</div>
+
+              <!-- a ilha (mesmas formas do app: linha → cápsula) -->
+              <div class="d-island">
+                <div class="d-shadow"><i></i></div>
+                <div class="d-pill">
+                  <div class="d-soul" id="deskSoul"></div>
+                  <span class="d-badge">1</span>
+                  <div class="d-right"><span class="d-ac"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg>21°</span><span class="d-clock" id="deskClock">14:32</span></div>
+                </div>
+              </div>
+
+              <!-- painel -->
+              <div class="d-panel glassy">
+                <div class="d-head"><div><b>Alma</b><small>Seu espaço pessoal</small></div><span class="d-date" id="deskDate">Sexta-feira, 23 de out</span><span class="d-gear"></span></div>
+                <div class="d-tabs"><span class="on"><i class="ti ti-ac"></i>Clima</span><span><i class="ti ti-clock"></i>Foco</span><span><i class="ti ti-music"></i>Música</span><span><i class="ti ti-tasks"></i>Tarefas</span><span><i class="ti ti-tray"></i>Bandeja</span><span><i class="ti ti-clip"></i>Traduzir</span><span><i class="ti ti-music"></i>Cores</span><span><i class="ti ti-apps"></i>Apps</span></div>
+                <div class="d-card">
+                  <div class="d-row"><b>Ar-condicionado</b><small>Smart Life</small></div>
+                  <div class="d-temp"><span class="d-round" data-temp="-1">−</span><span class="d-num"><span id="deskTemp">21</span><sup>°C</sup></span><span class="d-round" data-temp="1">+</span></div>
+                  <p class="d-sub">Ligado · Ambiente 24°</p>
+                  <div class="d-actions"><span class="d-power"></span><span class="d-turbo">Turbo</span></div>
+                </div>
+                <div class="d-card"><small>Modo</small><div class="d-chips"><span class="on">Frio</span><span>Quente</span><span>Seco</span><span>Ventilar</span><span>Auto</span></div></div>
+              </div>
+
+              <!-- hotbar -->
+              <div class="d-dock glassy">
+                <span class="dk dk-start"></span><i class="dk-sep"></i>
+                <span class="dk" style="--h:205"></span><span class="dk" style="--h:28"></span><span class="dk" style="--h:142"></span><span class="dk" style="--h:265"></span><span class="dk" style="--h:340"></span><span class="dk" style="--h:48"></span>
+              </div>
+
+              <!-- bandeja de arquivos -->
+              <div class="d-drop glassy"><div><span class="d-drop-ic"></span><b>Solte para guardar na bandeja</b><small>Fica aqui por 12 horas</small></div></div>
+              <div class="d-file"><span></span><small>relatório.pdf</small></div>
+
+              <svg class="d-cursor" viewBox="0 0 24 24"><path d="M5 2.5v17.2l4.3-4.1 2.8 6.4 2.6-1.1-2.8-6.3h6z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <ol class="story-steps" id="steps">
+          <li data-step="1"><span class="step-n">1</span><div><h3><button class="step-go" data-go="1">Fica quietinha no topo</button></h3><p>Parada, a ilha vira uma linha fina na borda da tela, ou some de vez, se você preferir.</p></div></li>
+          <li data-step="2"><span class="step-n">2</span><div><h3><button class="step-go" data-go="2">Parou o mouse, ela aparece</button></h3><p>A Alminha acorda, acena e mostra o relógio e a temperatura do ar.</p></div></li>
+          <li data-step="3"><span class="step-n">3</span><div><h3><button class="step-go" data-go="3">Um clique e tudo se abre</button></h3><p>Clima, foco, música, tarefas, tradução, cores, apps e arquivos, num painel de vidro. Você escolhe quais aparecem.</p></div></li>
+          <li data-step="4"><span class="step-n">4</span><div><h3><button class="step-go" data-go="4">Seus apps descem da ilha</button></h3><p>A hotbar abre, alterna e fixa programas. A barra de tarefas do Windows pode até sumir.</p></div></li>
+          <li data-step="5"><span class="step-n">5</span><div><h3><button class="step-go" data-go="5">Arraste um arquivo até ela</button></h3><p>Ele fica 12 horas na bandeja, pronto para enviar numa conversa ou mover de pasta.</p></div></li>
+        </ol>
+        <div class="story-progress" aria-hidden="true"><i id="storyBar"></i></div>
+      </div>
+    </section>
+
+    <!-- ===================== Manifesto (acende palavra por palavra com a rolagem) ===================== -->
+    <section class="manifesto" id="manifesto" aria-label="O jeito da Alma">
+      <div class="mf-sticky">
+        <p class="mf-text" id="mfText">Fica quietinha no topo da tela, fora do seu caminho. Quando você precisa, ela aparece: o foco, a tradução, as cores, o ar, a música e os seus apps, a um passar de mouse.</p>
+      </div>
+    </section>
+
+    <!-- ===================== Novidades da 1.1 (demonstrações que dá para usar) ===================== -->
+    <section class="novo" id="novo" aria-labelledby="novoTitulo">
+      <div class="sec-head">
+        <p class="eyebrow reveal"><span class="new-badge">Novo</span>&nbsp; na versão 1.1</p>
+        <h2 class="reveal" id="novoTitulo">Cinco jeitos novos<br />de <span class="shine">ajudar.</span></h2>
+        <p class="lead reveal">Foco com a Alminha cochilando, tradução de arrastar e soltar, conta-gotas, painéis do seu jeito e ações que acontecem sozinhas. Experimente aqui mesmo.</p>
+      </div>
+      <div class="demos">
+        <!-- Foco -->
+        <article class="demo d-focus reveal" id="demoFocus" data-phase="focus">
+          <header class="demo-head">
+            <span class="demo-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 9.5v4l2.5 1.5M9.5 2.5h5M12 2.5V6"/></svg></span>
+            <div><h3>Foco</h3><p>Pomodoro, temporizador e cronômetro. Enquanto você foca, a Alminha cochila e a Alma fica em silêncio.</p></div>
+          </header>
+          <div class="stage">
+            <div class="mini-island">
+              <span class="mi-soul" id="fSoul"></span>
+              <span class="mi-z" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span>
+              <span class="mi-focus"><svg class="ring-mini" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5" pathLength="100"/><circle class="pf" id="fMini" cx="10" cy="10" r="7.5" pathLength="100" style="stroke-dashoffset:100"/></svg><b id="fChip">25:00</b></span>
+            </div>
+            <div class="f-ring">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><defs><linearGradient id="fGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb340"/><stop offset="1" stop-color="#ff375f"/></linearGradient></defs><circle class="rb" cx="60" cy="60" r="52"/><circle class="rf" id="fRing" cx="60" cy="60" r="52" pathLength="100" style="stroke-dashoffset:100"/></svg>
+              <div class="f-txt"><b id="fTime" role="timer">25:00</b><small id="fPhase">Foco · rodada 1 de 4</small></div>
+            </div>
+            <div class="f-ctl">
+              <button class="f-btn" id="fReset" aria-label="Recomeçar"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.5"/><path d="M4 3.5v5h5"/></svg></button>
+              <button class="f-btn big" id="fPlay" aria-label="Começar"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg></button>
+              <button class="f-btn" id="fSkip" aria-label="Pular para a próxima etapa"><svg viewBox="0 0 24 24"><path d="m5 5 9 7-9 7z"/><path d="M18 5v14"/></svg></button>
+            </div>
+            <div class="f-dots" id="fDots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <p class="demo-note">Demonstração acelerada: cada segundo vale um minuto.</p>
+          </div>
+        </article>
+
+        <!-- Tradução -->
+        <article class="demo d-tr reveal" id="demoTr">
+          <header class="demo-head">
+            <span class="demo-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h8M8 3v2M5.5 5c.8 3.2 3 5.6 6 7M10.5 5c-.6 3.4-2.7 6-5.8 7.6"/><path d="m12.5 20 3.8-9 3.8 9M13.9 17h4.8"/></svg></span>
+            <div><h3>Tradução rápida</h3><p>Selecione um texto em qualquer app e arraste até a ilha. Ela descobre o idioma e traduz, sem abrir o navegador.</p></div>
+          </header>
+          <div class="stage" id="trStage">
+            <div class="mini-island tr-target" id="trIsland"><span class="mi-soul" id="trSoul"></span><span class="tr-hint">Solte aqui para traduzir</span></div>
+            <div class="tr-chips">
+              <button class="tr-chip" data-i="0"><small>EN</small>Good morning! Shall we start?</button>
+              <button class="tr-chip" data-i="1"><small>ES</small>¿Dónde está la estación?</button>
+              <button class="tr-chip" data-i="2"><small>FR</small>Merci beaucoup pour ton aide</button>
+              <button class="tr-chip" data-i="3"><small>JA</small>今日はいい天気ですね</button>
+              <button class="tr-chip" data-i="4"><small>PT</small>Vamos tomar um café?</button>
+            </div>
+            <div class="tr-out" aria-live="polite">
+              <div class="tr-meta"><span id="trLangs">Arraste uma frase até a ilha</span><span id="trNote"></span></div>
+              <p class="tr-text wait" id="trText">…ou clique nela.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Conta-gotas -->
+        <article class="demo d-color reveal" id="demoColor">
+          <header class="demo-head">
+            <span class="demo-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14.5 6.5 3 3M3 21l1.2-3.6L14 7.6l2.4 2.4-9.8 9.8z"/><path d="M14.2 4.8 16 3a2.1 2.1 0 0 1 3 3l-1.8 1.8"/></svg></span>
+            <div><h3>Conta-gotas</h3><p>Pegue a cor de qualquer ponto da tela com uma lupa e copie em HEX, RGB ou HSL.</p></div>
+          </header>
+          <div class="stage">
+            <div class="cp-screen" id="cpScreen" tabindex="0" role="application" aria-label="Tela de exemplo. Mova o mouse ou use as setas e clique ou aperte Enter para pegar uma cor.">
+              <canvas id="cpCanvas" aria-hidden="true"></canvas>
+              <div class="cp-loupe" aria-hidden="true"><canvas id="cpZoom" width="15" height="15"></canvas><i></i></div>
+              <div class="cp-tag" aria-hidden="true"><span></span><b id="cpTagTxt">#000000</b></div>
+            </div>
+            <div class="cp-row">
+              <span class="cp-sw" id="cpSw"></span>
+              <div class="cp-vals">
+                <button class="cp-val" data-f="hex"><small>HEX</small><b>#3A9DFF</b><em>copiado</em></button>
+                <button class="cp-val" data-f="rgb"><small>RGB</small><b>rgb(58, 157, 255)</b><em>copiado</em></button>
+                <button class="cp-val" data-f="hsl"><small>HSL</small><b>hsl(210, 100%, 61%)</b><em>copiado</em></button>
+              </div>
+            </div>
+            <div class="cp-hist" id="cpHist" aria-label="Cores recentes"><small>As cores que você pegar aparecem aqui.</small></div>
+          </div>
+        </article>
+
+        <!-- Módulos -->
+        <article class="demo d-mods reveal" id="demoMods">
+          <header class="demo-head">
+            <span class="demo-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><path d="M17.25 13.5v7.5M13.5 17.25H21"/></svg></span>
+            <div><h3>Módulos do seu jeito</h3><p>Escolha o que aparece quando a ilha abre, mude a ordem e esconda o que você não usa.</p></div>
+          </header>
+          <div class="stage">
+            <div class="md-tabs" id="mdTabs" role="tablist" aria-label="Painel da ilha (prévia)"><span class="md-ind" id="mdInd"></span></div>
+            <ul class="md-list" id="mdList"></ul>
+            <p class="demo-note">Arraste pela alça (ou use Alt + ↑ ↓) e ligue ou desligue cada um.</p>
+          </div>
+        </article>
+
+        <!-- Alma Actions -->
+        <article class="demo d-act demo-wide reveal" id="demoAct">
+          <header class="demo-head">
+            <span class="demo-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+            <div><h3>Alma Actions</h3><p>Pequenas automações sem programar: quando algo acontecer, a Alma faz por você. E desfaz tudo quando acabar.</p></div>
+          </header>
+          <div class="act-wrap">
+            <div class="act-rule">
+              <div class="act-tabs" role="tablist" aria-label="Exemplos de ações">
+                <button role="tab" aria-selected="true" class="on" data-act="game">Jogando</button>
+                <button role="tab" aria-selected="false" data-act="focus">Hora de focar</button>
+                <button role="tab" aria-selected="false" data-act="morning">Bom dia, Alma</button>
+              </div>
+              <div class="act-block act-when" id="actWhenBox"><span class="act-tag">Quando</span><b id="actWhen">Abrir um jogo</b></div>
+              <div class="act-block"><span class="act-tag">Fazer</span><ol class="act-steps" id="actSteps"></ol></div>
+              <div class="act-foot">
+                <div class="act-undo" id="actUndo"><span class="sw on" aria-hidden="true"></span><span id="actUndoTxt">Desfazer tudo quando o jogo fechar</span></div>
+              </div>
+              <button class="pill-btn magnetic" id="actReplay">Ver de novo</button>
+            </div>
+            <div class="act-scene" id="actScene" aria-hidden="true">
+              <div class="as-wall"><i class="w1"></i><i class="w2"></i></div>
+              <div class="as-win as-game"><span class="as-sun"></span><span class="as-road"></span><span class="as-car"></span><span class="as-hud">Volta 2/3<span>182 km/h</span></span></div>
+              <div class="as-win as-doc"><b>Relatório do mês</b><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="as-island">
+                <span class="as-soul" id="asSoul"></span>
+                <span class="as-right">
+                  <span class="as-moon"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span>
+                  <span class="as-focus"><svg class="ring-mini" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5" pathLength="100"/><circle class="pf" id="asRing" cx="10" cy="10" r="7.5" pathLength="100" style="stroke-dashoffset:96"/></svg><b id="asFocus">24:59</b></span>
+                  <span class="as-clock" id="asClock">14:32</span>
+                </span>
+              </div>
+              <div class="as-vol"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg><span class="as-bar"><i id="asBar"></i></span><b id="asVolN">80</b></div>
+              <div class="as-toast" id="asToast"></div>
+              <div class="as-task"><i style="--h:205"></i><i style="--h:28"></i><i style="--h:142"></i><i style="--h:265"></i><i style="--h:340"></i></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Alminha ===================== -->
+    <section class="alminha-sec" id="alminha" aria-labelledby="alminhaTitulo">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Conheça a Alminha</p>
+        <h2 class="reveal" id="alminhaTitulo">Ela reage a tudo.</h2>
+        <p class="lead reveal">Acena quando você chega, treme quando o ar gela, dança com a música, comemora tarefas feitas e cochila quando ninguém aparece.</p>
+      </div>
+      <div class="alminha-stage reveal">
+        <div class="halo" aria-hidden="true"></div>
+        <div class="big-soul" id="bigSoul" role="img" aria-label="A Alminha, a mascote da Alma"></div>
+      </div>
+      <div class="moods reveal" role="group" aria-label="Faça a Alminha reagir">
+        <button class="pill-btn magnetic" data-mood="wave">Acenar</button>
+        <button class="pill-btn magnetic" data-mood="dance">Dançar</button>
+        <button class="pill-btn magnetic" data-mood="cold">Sentir frio</button>
+        <button class="pill-btn magnetic" data-mood="love">Comemorar</button>
+        <button class="pill-btn magnetic" data-mood="sleep">Cochilar</button>
+      </div>
+      <div class="bodies reveal" role="group" aria-label="Cor da Alminha">
+        <button aria-pressed="true" class="body-sw on" data-body="cream" style="--hi:#ffffff;--c:#F6F4EF;--sh:#d6d0c4;--arm:#ece8df;--visor:#1E2533" title="Creme"><span></span></button>
+        <button aria-pressed="false" class="body-sw" data-body="sky" style="--hi:#f7fcff;--c:#d6ecfb;--sh:#9cc4e2;--arm:#c8e2f5;--visor:#17222f" title="Céu"><span></span></button>
+        <button aria-pressed="false" class="body-sw" data-body="mint" style="--hi:#f7fffb;--c:#d5f3e4;--sh:#9fd2b9;--arm:#c9ecda;--visor:#19272a" title="Menta"><span></span></button>
+        <button aria-pressed="false" class="body-sw" data-body="lavender" style="--hi:#fbf9ff;--c:#e4dcff;--sh:#b3a5e6;--arm:#d8cff8;--visor:#1f1d33" title="Lavanda"><span></span></button>
+        <button aria-pressed="false" class="body-sw" data-body="rose" style="--hi:#fff6f8;--c:#ffdbe5;--sh:#e7a9bb;--arm:#f7cfda;--visor:#2a1d2a" title="Rosa"><span></span></button>
+        <button aria-pressed="false" class="body-sw" data-body="peach" style="--hi:#fffaf5;--c:#ffe1cc;--sh:#eab08d;--arm:#f7d4bc;--visor:#2b1f1c" title="Pêssego"><span></span></button>
+        <button aria-pressed="false" class="body-sw" data-body="graphite" style="--hi:#8a8f99;--c:#4a4e57;--sh:#2a2c32;--arm:#3d4048;--visor:#0c0e12" title="Grafite"><span></span></button>
+      </div>
+    </section>
+
+    <!-- ===================== Liquid Glass ===================== -->
+    <section class="glass-sec" id="vidro" aria-labelledby="vidroTitulo">
+      <div class="glass-scene" id="glassScene">
+        <div class="layer far" data-speed="-0.18" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i></div>
+        <div class="layer near" data-speed="0.12" aria-hidden="true"><i class="g4"></i><i class="g5"></i><i class="g6"></i></div>
+        <div class="glass-card reveal" id="glassCard" data-material="glass">
+          <span class="lens" aria-hidden="true"></span>
+          <p class="eyebrow">Liquid Glass</p>
+          <h2 id="vidroTitulo">Vidro de verdade.</h2>
+          <p>A ilha desfoca o que está atrás dela, sem imitação. A borda dobra a luz como uma lente, o brilho acompanha o mouse e o texto troca de cor sozinho sobre fundos claros.</p>
+          <div class="seg" role="group" aria-label="Material">
+            <i class="seg-thumb"></i>
+            <button aria-pressed="false" data-material="solid">Sólido</button>
+            <button aria-pressed="true" class="on" data-material="glass">Liquid Glass</button>
+            <button aria-pressed="false" data-material="clear">Vidro claro</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Recursos ===================== -->
+    <section class="features" id="recursos" aria-labelledby="recursosTitulo">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Tudo num lugar só</p>
+        <h2 class="reveal" id="recursosTitulo">O que cabe na ilha.</h2>
+      </div>
+      <div class="bento">
+        <article class="card c-wide reveal">
+          <div class="card-txt"><h3>Clima</h3><p>Ligue o ar, ajuste a temperatura, o modo e o turbo. Funciona com Elgin e Smart Life, LG, Samsung e Home Assistant.</p></div>
+          <div class="mock mock-ac"><span class="m-round">−</span><span class="m-temp">21<sup>°C</sup></span><span class="m-round">+</span><div class="m-chips"><span class="on">Frio</span><span>Seco</span><span>Turbo</span></div></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-txt"><h3>Tocando agora</h3><p>Capa, música e progresso do Spotify, do YouTube ou de qualquer player.</p></div>
+          <div class="mock mock-player"><span class="m-art"></span><div><b>Noites de Lo-fi</b><small>Alminha &amp; Amigos</small><span class="m-bar"><i></i></span></div></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-txt"><h3>Bandeja de arquivos</h3><p>Arraste até a ilha e use depois: arrastar para fora, copiar ou mover. Sai em 12 horas.</p></div>
+          <div class="mock mock-tray"><span class="m-file f1"></span><span class="m-file f2"></span><span class="m-file f3"></span><small>sai em 12 h</small></div>
+        </article>
+        <article class="card c-wide reveal">
+          <div class="card-txt"><h3>Hotbar</h3><p>Seus apps fixados e as janelas abertas descem da ilha. Clique abre ou traz para a frente; o botão direito fixa e fecha.</p></div>
+          <div class="mock mock-dock"><span style="--h:205"></span><span style="--h:28"></span><span style="--h:142"></span><span class="act" style="--h:265"></span><span style="--h:340"></span><span style="--h:48"></span></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-txt"><h3>Tarefas e copiados</h3><p>Uma lista de afazeres e o histórico do que você copiou, sempre à mão.</p></div>
+          <div class="mock mock-list"><span class="done">Comprar café</span><span>Enviar o relatório</span><span>Ligar o ar às 18h</span></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-txt"><h3>Do seu jeito</h3><p>Módulos, cores, material, cantos, tamanho do texto, posição no topo, monitor e atalho de teclado.</p></div>
+          <div class="mock mock-a11y"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>A</kbd><div class="m-pos"><span></span><span class="on"></span><span></span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Temas (galeria horizontal presa; a rolagem vertical passa pelos temas) ===================== -->
+    <section class="themes" id="temas" aria-labelledby="temasTitulo">
+      <div class="th-sticky">
+        <div class="th-head">
+          <p class="eyebrow">Do seu jeito</p>
+          <h2 id="temasTitulo">Cores, vidro e formas.</h2>
+          <p class="lead">Escolha a cor, o material e o destaque. A ilha, a hotbar e o painel mudam juntos, na hora.</p>
+        </div>
+        <ul class="th-track" id="thTrack" role="list">
+          <li class="th-card" data-theme="grafite"><div class="th-cap"><b>Grafite</b><span>Liquid Glass · neutro</span></div></li>
+          <li class="th-card" data-theme="oceano"><div class="th-cap"><b>Oceano</b><span>Liquid Glass · azul</span></div></li>
+          <li class="th-card" data-theme="areia"><div class="th-cap"><b>Areia</b><span>Sólido · laranja</span></div></li>
+          <li class="th-card" data-theme="ameixa"><div class="th-cap"><b>Ameixa</b><span>Liquid Glass · roxo</span></div></li>
+          <li class="th-card" data-theme="nuvem"><div class="th-cap"><b>Nuvem</b><span>Vidro claro · azul</span></div></li>
+          <li class="th-card" data-theme="floresta"><div class="th-cap"><b>Floresta</b><span>Sólido · verde</span></div></li>
+          <li class="th-card" data-theme="vinho"><div class="th-cap"><b>Vinho</b><span>Liquid Glass · rosa</span></div></li>
+        </ul>
+        <div class="th-progress" aria-hidden="true"><i id="thBar"></i></div>
+      </div>
+    </section>
+
+    <!-- ===================== Privacidade ===================== -->
+    <section class="privacy" id="privacidade" aria-labelledby="privTitulo">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Privacidade</p>
+        <h2 class="reveal" id="privTitulo">Tudo fica no seu computador.</h2>
+      </div>
+      <div class="priv-grid">
+        <div class="priv reveal"><span class="priv-ic ic-user" aria-hidden="true"></span><h3>Sem conta</h3><p>Você não cria cadastro nem faz login para usar a Alma.</p></div>
+        <div class="priv reveal"><span class="priv-ic ic-lock" aria-hidden="true"></span><h3>Dados guardados com você</h3><p>Tarefas, bandeja e aparência ficam no seu PC. As chaves do ar-condicionado são cifradas pelo Windows.</p></div>
+        <div class="priv reveal"><span class="priv-ic ic-eye" aria-hidden="true"></span><h3>O vidro não grava nada</h3><p>Para desfocar, a ilha lê a imagem da tela na hora e descarta. O conta-gotas também: só a cor que você escolhe fica guardada.</p></div>
+      </div>
+      <p class="priv-note reveal">A única coisa que sai do seu computador é o texto que você pede para traduzir: ele vai para o serviço de tradução, e só quando você solta ou clica em Traduzir.</p>
+    </section>
+
+    <!-- ===================== Baixar ===================== -->
+    <section class="download" id="baixar" aria-labelledby="baixarTitulo">
+      <div class="dl-card reveal">
+        <img class="dl-mark" src="assets/logo-mark.svg" alt="" width="160" height="63" />
+        <h2 id="baixarTitulo">Baixe a Alma</h2>
+        <p class="lead">Grátis para Windows 10 e 11 (64 bits).</p>
+        <a class="btn btn-primary btn-lg magnetic dl-link" id="dlMain" href="#baixar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg>
+          <span>Baixar a <span class="dl-version-lc">versão 1.1.1</span></span>
+        </a>
+        <p class="meta"><span class="dl-size">107 MB</span> · <span class="dl-date">24 de outubro de 2026</span></p>
+        <details class="notes" open>
+          <summary>Novidades desta versão</summary>
+          <ul id="dlNotes">
+            <li>Foco: pomodoro, temporizador e cronômetro na ilha</li>
+            <li>Módulos: escolha o que aparece no painel e em que ordem</li>
+            <li>Tradução rápida: arraste um texto até a ilha</li>
+            <li>Conta-gotas de cores em HEX, RGB ou HSL</li>
+            <li>Alma Actions: automações do tipo "quando… fazer…"</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="faq">
+        <h3 class="faq-title reveal">Perguntas frequentes</h3>
+        <details class="reveal"><summary>O Windows mostrou "O Windows protegeu o computador"</summary><p>Isso aparece porque o instalador ainda não tem assinatura digital. Clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>. Só acontece na primeira instalação.</p></details>
+        <details class="reveal"><summary>Como recebo as versões novas?</summary><p>A Alma confere sozinha e avisa na ilha. Em <b>Configurações › Geral › Atualizações</b> você vê as novidades e clica em <b>Baixar e instalar</b>. Nada é instalado sem você pedir.</p></details>
+        <details class="reveal"><summary>Como crio uma ação automática?</summary><p>Em <b>Configurações › Ações</b>, comece de um modelo (como <b>Jogando</b>) ou clique em <b>Nova ação</b>: escolha <b>Quando</b> (abrir um app ou jogo, tela cheia, começar o foco…) e o que <b>Fazer</b> (volume, modo silencioso, esconder a ilha, abrir um site…). <b>Testar</b> mostra na hora.</p></details>
+        <details class="reveal"><summary>Posso esconder os painéis que não uso?</summary><p>Sim. Em <b>Configurações › Módulos</b> você liga, desliga e muda a ordem de cada painel da ilha. Lá também ficam os tempos do foco, os idiomas da tradução e o formato do conta-gotas.</p></details>
+        <details class="reveal"><summary>Quais ar-condicionados funcionam?</summary><p>Elgin, Philco, TCL e outros pelo app Smart Life; LG pelo LG ThinQ; Samsung pelo SmartThings; e Midea, Springer, Gree, Daikin, Fujitsu e Electrolux pelo Home Assistant.</p></details>
+        <details class="reveal"><summary>Como desinstalo?</summary><p>Em <b>Configurações do Windows › Aplicativos</b>, procure Alma e clique em Desinstalar. Ele pergunta se você quer apagar também os seus dados.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <!-- partículas da Alminha (brilhos, notas, neve), por cima de tudo -->
+  <div class="fx-layer" id="fxLayer" aria-hidden="true"></div>
+
+  <footer class="foot">
+    <div class="foot-cta">
+      <p class="foot-line">Pronta para morar no topo da sua tela?</p>
+      <a class="btn btn-primary btn-lg magnetic dl-link" href="#baixar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg>
+        Baixar para Windows
+      </a>
+    </div>
+    <!-- a palavra "Alma" gigante, surgindo com a rolagem -->
+    <svg class="foot-word" id="footWord" viewBox="0 0 324 98" aria-hidden="true">
+      <defs><linearGradient id="fwGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="98"><stop offset="0" stop-color="currentColor" stop-opacity=".9"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
+      <g fill="none" stroke="url(#fwGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"><path d="M10 86 54 11 97 86"/><path d="M130 11V86"/><path d="M168 86V60C168 48 176 41 188 41S208 48 208 60V86M208 60C208 48 216 41 228 41S248 48 248 60V86"/><circle cx="291" cy="65" r="21"/><path d="M312 44V86"/></g>
+      <circle cx="54.5" cy="66" r="9.5" fill="#2f9bff"/>
+    </svg>
+    <div class="foot-bottom">
+      <img src="assets/logo-mark.svg" alt="" width="54" height="21" />
+      <p>Alma · feita para o Windows, com carinho e a Alminha.</p>
+      <a href="#topo">Voltar ao topo</a>
+    </div>
+  </footer>
+
+  <script src="js/vendor/lenis.min.js" defer></script>
+  <script src="js/mascot.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/novo.js" defer></script>
+</body>
+</html>

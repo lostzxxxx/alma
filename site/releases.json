@@ -1,0 +1,40 @@
+{
+  "repo": "lostzxxxx/alma",
+  "latest": {
+    "version": "1.1.1",
+    "date": "2026-10-24",
+    "file": "Alma-Setup-1.1.1.exe",
+    "url": "download/Alma-Setup-1.1.1.exe",
+    "size": 112108569,
+    "notes": [
+      "Foco: pomodoro, temporizador e cronômetro na ilha — a Alminha dorme enquanto você foca",
+      "Módulos: escolha o que aparece no painel, em que ordem, e esconda o resto",
+      "Tradução rápida: arraste um texto até a ilha",
+      "Conta-gotas: pegue a cor de qualquer ponto da tela em HEX, RGB ou HSL",
+      "Alma Actions: \"quando abrir um jogo, baixar o volume e esconder a ilha\"",
+      "Animações mais rápidas, e a Alminha comemora com um pulinho (sem girar)"
+    ]
+  },
+  "history": [
+    {
+      "version": "1.1.0",
+      "date": "2026-10-24",
+      "file": "Alma-Setup-1.1.0.exe",
+      "size": 112108471,
+      "notes": ["Foco, módulos, tradução rápida, conta-gotas e Alma Actions"]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-10-23",
+      "file": "Alma-Setup-1.0.0.exe",
+      "size": 112087711,
+      "notes": [
+        "Primeira versão com instalador",
+        "A Alma avisa quando sair uma versão nova",
+        "Visual Liquid Glass, com desfoque de verdade",
+        "Bandeja de arquivos, hotbar e o que está tocando agora",
+        "Acessibilidade: posição, jeito de aparecer e atalho de teclado"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# dependências e builds (o instalador vai para o GitHub Releases, não para o repositório)
+node_modules/
+instalador/
+release/
+dist/
+site/download/
+*.exe
+*.blockmap
+
+# coisas locais
+.claude/
+_removido/
+*.log

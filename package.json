@@ -1,0 +1,52 @@
+{
+  "name": "alma",
+  "productName": "Alma",
+  "version": "1.1.1",
+  "description": "Alma - ilha no topo da tela com a Alminha e painéis rápidos (ar-condicionado, música, tarefas, rotinas)",
+  "author": "Alma",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . Alma --platform=win32 --arch=x64 --icon=assets/icon.ico --out=release --overwrite --prune=true --ignore=^/release --ignore=^/instalador --ignore=^/_removido --ignore=^/site --ignore=^/build --app-version=1.0.0 --asar.unpack=**/*.ps1",
+    "dist": "electron-builder --win nsis --publish never"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "electron-updater": "^6.8.9"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "electron": "^44.9.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.alma.assistente",
+    "productName": "Alma",
+    "copyright": "Alma",
+    "directories": { "output": "instalador", "buildResources": "build" },
+    "files": ["src/**/*", "assets/**/*", "package.json", "!assets/antigo/**"],
+    "asarUnpack": ["**/*.ps1"],
+    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }], "icon": "assets/icon.ico" },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Alma",
+      "runAfterFinish": true,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "uninstallDisplayName": "Alma",
+      "artifactName": "Alma-Setup-${version}.${ext}",
+      "installerLanguages": ["pt_BR"],
+      "language": "1046",
+      "deleteAppDataOnUninstall": false,
+      "include": "build/installer.nsh"
+    },
+    "publish": [{ "provider": "github", "owner": "lostzxxxx", "repo": "alma", "releaseType": "release" }]
+  }
+}

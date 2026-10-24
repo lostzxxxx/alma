@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 50" role="img" aria-label="Alma">
+  <defs>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34466d"/><stop offset=".55" stop-color="#17233f"/><stop offset="1" stop-color="#0d1630"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="100%" r="60%"><stop offset="0" stop-color="#4aa3ff" stop-opacity=".95"/><stop offset="1" stop-color="#4aa3ff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="egg" cx="42%" cy="22%" r="90%"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#e4eaf6"/><stop offset="1" stop-color="#8ec3ff"/></radialGradient>
+    <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2542"/><stop offset="1" stop-color="#0b1228"/></linearGradient>
+    <clipPath id="clip"><rect x="1" y="1" width="126" height="48" rx="24"/></clipPath>
+    <filter id="eye" x="-150%" y="-60%" width="400%" height="220%"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect x="1" y="1" width="126" height="48" rx="24" fill="url(#cap)"/>
+  <g clip-path="url(#clip)">
+    <ellipse cx="64" cy="54" rx="60" ry="15" fill="url(#glow)"/>
+    <ellipse cx="64" cy="47" rx="30" ry="41" fill="url(#egg)"/>
+    <rect x="43" y="17" width="42" height="21" rx="10.5" fill="url(#visor)"/>
+    <g filter="url(#eye)" fill="#7fe0ff"><rect x="51.6" y="22.5" width="4.6" height="11" rx="2.3"/><rect x="71.8" y="22.5" width="4.6" height="11" rx="2.3"/></g>
+    <path d="M16 48.4H112" stroke="#5aaeff" stroke-width="2.2" stroke-linecap="round" opacity=".9"/>
+  </g>
+  <rect x="1.5" y="1.5" width="125" height="47" rx="23.5" fill="none" stroke="#fff" stroke-opacity=".14"/>
+</svg>
