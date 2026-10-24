@@ -37,6 +37,9 @@
   .hero-new:hover { scale: 1.04; }
   .hero-new:hover svg { transform: translateX(3px); }
 }
+/* com 7 links a barra aperta: nunca quebra linha, e em janelas médias saem os dois últimos */
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1100px) { .nav-links a:is([href='#temas'], [href='#privacidade']) { display: none; } }
 .nav-links a .dot { display: inline-block; width: 6px; height: 6px; margin-left: 6px; border-radius: 50%; vertical-align: 2px; background: #ff6fae; box-shadow: 0 0 8px #ff6fae; }
 
 /* ---------- faixas de recursos que correm (duas, cruzadas) ---------- */
